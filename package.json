@@ -1,0 +1,30 @@
+{
+  "name": "school_dbms_expressapp",
+  "version": "1.0.0",
+  "description": "ExpressJS and MySQL database integration demostration with ejs,vanilla js and raw css.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hk-117/School_DBMS_ExpressApp.git"
+  },
+  "keywords": [
+    "express.js",
+    "mysql",
+    "ejs",
+    "html",
+    "css"
+  ],
+  "author": "hk_117",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hk-117/School_DBMS_ExpressApp/issues"
+  },
+  "homepage": "https://github.com/hk-117/School_DBMS_ExpressApp#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
