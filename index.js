@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine','ejs');
 const port = 5000;
 
 app.get('/teachers/:id',(req,res)=>{
@@ -22,7 +23,9 @@ app.get('/students',(req,res)=>{
 });
 
 app.get('/',(req,res)=>{
-    res.send("<h1> Welcome. You are in Homepage. </h1>");
+    res.render('index',{
+        title: "Shopnolok | Homepage"
+    });
 });
 
 app.listen(port,()=>{
