@@ -1,0 +1,14 @@
+<%- include('header.ejs') -%>
+
+<div id="main-body"> 
+    <div id="body-content">
+        <h1> Student List Below: </h1>
+        <ul id="students">
+            <% students.forEach(function(student){ %>
+                <li> <a href="/students/<%= student.ID %>"> <%= student.name %> </a> </li>
+           <% }); %>
+        </ul>
+    </div>
+</div>
+
+<%- include('footer.ejs') -%>
