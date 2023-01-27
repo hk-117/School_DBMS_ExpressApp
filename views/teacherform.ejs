@@ -1,0 +1,13 @@
+<%- include('header.ejs') -%>
+
+<div id="main-body"> 
+    <div id="body-content">
+        <h1> Search Teacher using ID: </h1>
+        <form method="POST" action="/teacherinfo">
+            <input type="text" name="teacherid" placeholder="Teacher Id"/> </br>
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+</div>
+
+<%- include('footer.ejs') -%>

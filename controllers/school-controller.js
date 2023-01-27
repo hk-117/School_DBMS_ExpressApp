@@ -54,6 +54,18 @@ const teacherInfoByID = (req,res)=>{
     });
 }
 
+const teacherInfo = (req,res) => {
+    res.render('teacherform',{
+        title: "Shopnolok | Search Teacher"
+    });
+}
+
+const teacherInfoPost = (req,res) => {
+    res.render('teacherform',{
+        title: "Shopnolok | Search Teacher"
+    });
+}
+
 const teacherList = (req,res) => {
     res.render('teachers',{
         title: "Shopnolok | Teachers",
@@ -75,6 +87,18 @@ const studentInfoByID = (req,res) => {
     });
 }
 
+const studentInfo = (req,res) => {
+    res.render('studentform',{
+        title: "Shopnolok | Search Student"
+    });
+}
+
+const studentInfoPost = (req,res) => {
+    res.render('studentform',{
+        title: "Shopnolok | Search Student"
+    });
+}
+
 const studentList = (req,res) => {
     res.render('students',{
         title: "Shopnolok | Students",
@@ -91,7 +115,11 @@ const homePage = (req,res) => {
 module.exports = {
     teacherInfoByID,
     teacherList,
+    teacherInfo,
+    teacherInfoPost,
     studentInfoByID,
     studentList,
+    studentInfo,
+    studentInfoPost,
     homePage
 };

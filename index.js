@@ -10,6 +10,10 @@ const port = 5000;
 
 app.get('/teachers/:id',schoolController.teacherInfoByID);
 app.get('/teachers',schoolController.teacherList);
+app.get('/teacherinfo',schoolController.teacherInfo);
+app.get('/studentinfo',schoolController.studentInfo);
+app.post('/teacherinfo',schoolController.teacherInfoPost);
+app.post('/studentinfo',schoolController.studentInfoPost);
 app.get('/students/:id',schoolController.studentInfoByID);
 app.get('/students',schoolController.studentList);
 app.get('/',schoolController.homePage);
