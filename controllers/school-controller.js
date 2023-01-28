@@ -93,9 +93,8 @@ const studentInfo = (req,res) => {
 }
 
 const studentInfoPost = (req,res) => {
-    res.render('studentform',{
-        title: "Shopnolok | Search Student"
-    });
+    const {studentid} = req.body;
+    res.redirect(`/students/${studentid}`);
 }
 
 const studentList = (req,res) => {
