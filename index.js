@@ -3,18 +3,17 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const schoolController = require('./controllers/school-controller');
+const teacherRouter = require('./routes/teacher-routes');
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine','ejs');
 const port = 5000;
- 
-app.get('/teachers/:id',schoolController.teacherInfoByID);
-app.get('/teachers',schoolController.teacherList);
-app.get('/teacherinfo',schoolController.teacherInfo);
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(teacherRouter);
+
 app.get('/studentinfo',schoolController.studentInfo);
-app.post('/teacherinfo',schoolController.teacherInfoPost);
 app.post('/studentinfo',schoolController.studentInfoPost);
 app.get('/students/:id',schoolController.studentInfoByID);
 app.get('/students',schoolController.studentList);
