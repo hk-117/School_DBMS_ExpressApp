@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const schoolController = require('./controllers/school-controller');
 
-const app = express()
+const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine','ejs');
 const port = 5000;
-
+ 
 app.get('/teachers/:id',schoolController.teacherInfoByID);
 app.get('/teachers',schoolController.teacherList);
 app.get('/teacherinfo',schoolController.teacherInfo);

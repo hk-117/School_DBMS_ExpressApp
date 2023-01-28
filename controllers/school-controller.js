@@ -61,9 +61,8 @@ const teacherInfo = (req,res) => {
 }
 
 const teacherInfoPost = (req,res) => {
-    res.render('teacherform',{
-        title: "Shopnolok | Search Teacher"
-    });
+    const {teacherid} = req.body;
+    res.redirect(`/teachers/${teacherid}`);
 }
 
 const teacherList = (req,res) => {
